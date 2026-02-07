@@ -10,18 +10,17 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const hargaOutput = document.getElementById("hargaOutput");
 const hasil = document.getElementById("hasil");
 
-// 🔄 Checkbox behave like radio (1 pilihan, bisa ganti)
+
 checkboxes.forEach(cb => {
     cb.addEventListener("change", function () {
 
-        // uncheck lainnya
         checkboxes.forEach(other => {
             if (other !== this) {
                 other.checked = false;
             }
         });
 
-        // reset semua class background
+    
         document.body.classList.remove(
             "katun",
             "satin",
@@ -72,7 +71,7 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
     `;
 });
 
-// 🎉 Status pesanan berhasil
+
 document.addEventListener("click", function (e) {
     if (e.target && e.target.id === "buatPesanan") {
         hasil.innerHTML = `
@@ -81,3 +80,4 @@ document.addEventListener("click", function (e) {
         `;
     }
 });
+
