@@ -22,24 +22,19 @@ body {
     max-width: 720px;
     padding: 30px 26px;
 
-    /* Glassmorphism */
     background: rgba(20, 20, 20, 0.65);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
 
-    /* Shape */
+
     border-radius: 32px;
-
-    /* Border modern */
     border: 1px solid rgba(255, 255, 255, 0.08);
-
-    /* Depth */
     box-shadow:
         0 30px 60px rgba(0, 0, 0, 0.65),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
     position: relative;
-    /* transisi */
+
     transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -229,7 +224,7 @@ body.rayon {
     background-position: 100% center;
     animation: bgMove 40s linear infinite;
 }
-/* Accent glow frame */
+
 .container::before {
     content: "";
     position: absolute;
@@ -270,31 +265,31 @@ input:focus {
 }
 /* ===== Frame transparan sesuai bahan ===== */
 
-/* Katun – soft & seimbang */
+
 body.katun .container {
     background: rgba(30, 30, 30, 0.55);
 }
 
-/* Satin – lebih elegan */
+
 body.satin .container {
     background: rgba(25, 20, 20, 0.55);
 }
 
-/* Linen – natural */
+
 body.linen .container {
     background: rgba(28, 35, 35, 0.55);  
 }
 
-/* Jersey – clean & sporty */
+
 body.jersey .container {
     background: rgba(18, 22, 28, 0.55);  
 }
 
-/* Rayon – lembut */
+
 body.rayon .container {
     background: rgba(32, 32, 36, 0.55);
 }
-/* ===== Layout landscape split ===== */
+
 
 form {
     display: grid;
@@ -332,7 +327,7 @@ body {
     animation: bgMove 40s linear infinite;
 }
 
-/* Animasi gerak kanan ke kiri */
+
 @keyframes bgMove {
     from {
         background-position: 100% center;
@@ -341,6 +336,7 @@ body {
         background-position: 0% center;
     }
 }
+
 
 
 
