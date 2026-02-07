@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #1c1c1c, #0b0b0b);
+    color: #ffffff;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 80px;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    padding: 30px 26px;
+
+    /* Glassmorphism */
+    background: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    /* Shape */
+    border-radius: 32px;
+
+    /* Border modern */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* Depth */
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    position: relative;
+    /* transisi */
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
+
+h1 {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    margin-bottom: 1px;
+}
+.subtitle {
+    margin-top: 4px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 300;   
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+}
+
+
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #cfcfcf;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+input:focus {
+    border-color: #f5c16c;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.check {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.check input {
+    display: none;
+}
+
+.check span {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+
+.check input:checked + span {
+    color: #000;
+    background: #f5c16c;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 26px;
+    padding: 14px;
+    background: linear-gradient(135deg, #f5c16c, #d9a441);
+    border: none;
+    border-radius: 18px;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.hasil {
+    margin-top: 22px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 18px;
+    font-size: 14px;
+}
+
+.hasil h3 {
+    margin-top: 0;
+    color: #f5c16c;
+}
+.harga-output {
+    margin-top: 6px;
+    padding: 12px 14px;
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    color: #f5c16c;
+    font-size: 14px;
+}
+.btn-order {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    border: none;
+    border-radius: 16px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-order:hover {
+    opacity: 0.9;
+}
+
+.status-berhasil {
+    margin-top: 10px;
+    color: #4ade80;
+    font-weight: 600;
+}
+/* ===== Background berdasarkan gambar jenis bahan ===== */
+
+body.katun {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/katun.jpg")  repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+
+body.satin {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/satin.png")  repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+
+body.linen {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/linen.png") repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+
+body.jersey {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/jersey.png") repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+
+body.rayon {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/rayon.jpg") repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+/* Accent glow frame */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+    padding: 1px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(245, 193, 108, 0.6),
+        rgba(255, 255, 255, 0.05),
+        rgba(245, 193, 108, 0.3)
+    );
+
+    /* WebKit (Chrome, Safari) */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+
+    /* Standard (Firefox & future) */
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+input[type="text"],
+input[type="number"],
+.harga-output {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 0 1px rgba(245, 193, 108, 0.4);
+}
+/* ===== Frame transparan sesuai bahan ===== */
+
+/* Katun – soft & seimbang */
+body.katun .container {
+    background: rgba(30, 30, 30, 0.55);
+}
+
+/* Satin – lebih elegan */
+body.satin .container {
+    background: rgba(25, 20, 20, 0.55);
+}
+
+/* Linen – natural */
+body.linen .container {
+    background: rgba(28, 35, 35, 0.55);  
+}
+
+/* Jersey – clean & sporty */
+body.jersey .container {
+    background: rgba(18, 22, 28, 0.55);  
+}
+
+/* Rayon – lembut */
+body.rayon .container {
+    background: rgba(32, 32, 36, 0.55);
+}
+/* ===== Layout landscape split ===== */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.form-left .hasil {
+    margin-top: 20px;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.hasil {
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== Background awal (sebelum pilih bahan) ===== */
+
+body {
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("images/latarbelakang.png") repeat-x;
+    background-size: 120% auto;
+    background-position: 100% center;
+    animation: bgMove 40s linear infinite;
+}
+
+/* Animasi gerak kanan ke kiri */
+@keyframes bgMove {
+    from {
+        background-position: 100% center;
+    }
+    to {
+        background-position: 0% center;
+    }
+}
+
+
+
+
+

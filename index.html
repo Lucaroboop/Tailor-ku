@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Pembelian Baju Jahit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <h1>Tailor ku</h1>
+            <p>Buat baju mu dengan bahan terbaik</p>
+
+            <form id="orderForm">
+
+    <div class="form-left">
+        <label>Nama Baju</label>
+        <input type="text" id="namaBaju" required>
+
+        <label>Jumlah</label>
+        <input type="number" id="jumlah" min="1" required>
+
+        <!-- 🔥 RINGKASAN PINDAH KE SINI -->
+        <div id="hasil" class="hasil"></div>
+    </div>
+
+    <div class="form-right">
+        <label>Jenis Bahan</label>
+        <div class="checkbox-group">
+            <label class="check"><input type="checkbox" value="Katun"><span>Katun</span></label>
+            <label class="check"><input type="checkbox" value="Satin"><span>Satin</span></label>
+            <label class="check"><input type="checkbox" value="Linen"><span>Linen</span></label>
+            <label class="check"><input type="checkbox" value="Jersey"><span>Jersey</span></label>
+            <label class="check"><input type="checkbox" value="Rayon"><span>Rayon</span></label>
+        </div>
+
+        <label>Harga per Meter</label>
+        <div id="hargaOutput" class="harga-output">
+            Pilih jenis bahan
+        </div>
+
+        <button type="submit">Pesan Sekarang</button>
+    </div>
+
+</form>
+
+            <div id="hasil" class="hasil"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
